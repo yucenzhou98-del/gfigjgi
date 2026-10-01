@@ -1,0 +1,139 @@
+/* 全局樣式重置與字型 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+    background: linear-gradient(135deg, #fff5eb 0%, #ffe3d1 100%);
+    color: #4a3e3d;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(212, 107, 56, 0.15);
+    padding: 40px;
+    backdrop-filter: blur(10px);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    color: #d9534f;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #8c7b75;
+}
+
+/* 幸運卡片與互動效果區 */
+.card-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.lucky-card {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    background: #ffffff;
+    border: 4px solid #f0ad4e;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+    user-select: none;
+}
+
+.cat-avatar {
+    font-size: 80px;
+    transition: transform 0.2s ease;
+}
+
+/* 滑鼠懸停（Hover）動態 */
+.lucky-card:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 15px 30px rgba(240, 173, 78, 0.4);
+}
+
+.lucky-card:hover .cat-avatar {
+    transform: scale(1.1);
+}
+
+/* 點擊時的微調 */
+.lucky-card:active {
+    transform: scale(0.95);
+}
+
+.interactive-hint {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #e67e22;
+    font-weight: bold;
+}
+
+/* 故事介紹區域 */
+.story-section h2 {
+    font-size: 1.4rem;
+    color: #c0392b;
+    border-bottom: 2px dashed #f39c12;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+.content-box {
+    background: #fff8f0;
+    border-left: 4px solid #f39c12;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.content-box h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #d35400;
+}
+
+.content-box p, .content-box ul {
+    line-size: 1.6;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.content-box ul {
+    list-style-type: none;
+}
+
+.content-box li {
+    margin-bottom: 6px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.85rem;
+    color: #aaa;
+}
+
